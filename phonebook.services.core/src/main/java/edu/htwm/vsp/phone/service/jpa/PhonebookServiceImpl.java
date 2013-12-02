@@ -35,14 +35,14 @@ public class PhonebookServiceImpl implements PhonebookService {
 
 	@Override
 	@Transactional
-	public PhoneUser findUserById(int userID) {
+	public PhoneUser getUserById(int userID) {
 		return getEntityManager().find(PhoneUser.class, userID);
 	}
 	
 	@Override
 	@Transactional
 	public void deleteUser(int userID) {
-		PhoneUser userToDelete = findUserById(userID);
+		PhoneUser userToDelete = getUserById(userID);
 		
 		if(userToDelete == null)
 			return;

@@ -10,7 +10,7 @@ import org.junit.Test;
 import edu.htwm.vsp.phone.service.PhoneNumber;
 import edu.htwm.vsp.phone.service.PhoneUser;
 
-public class PhoneNumberTests extends BaseTest {
+public class PhoneNumberTest extends BaseTest {
 
 	@Test
 	public void addSingleNumberToUser() {
