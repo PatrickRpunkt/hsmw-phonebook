@@ -16,9 +16,9 @@
     <!-- Eindeutige Defintion des Artefakts ueber group- artifactId und version 
     Mit diesen Angaben kann dieses Artefakt in jedem anderen maven-Projekt als 
     Abhaengikeit (dependeny verwendet werden) -->
-    <groupId>edu.htwm.vsp</groupId>
+    <groupId>edu.htwm.a3s</groupId>
     <artifactId>phonebook</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
 
     <!-- Das packaging gibt an, um welchen Artefakttyp es sich handelt. Der 
     Wert "pom" erstellt ein Parent-Project -> also eine Art gemeinsames Oberprojekt 
