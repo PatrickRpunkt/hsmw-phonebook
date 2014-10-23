@@ -1,5 +1,8 @@
 package edu.htwm.a3s.phonebook.services.core;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "phone-number")
 public class PhoneNumber {
 
     private String number;

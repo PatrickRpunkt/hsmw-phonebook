@@ -1,8 +1,13 @@
 package edu.htwm.a3s.phonebook.services.core;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
+@XmlRootElement(name = "user")
 public class PhoneUser {
 
     private String name;
@@ -31,6 +36,7 @@ public class PhoneUser {
         this.name = name;
     }
 
+    @XmlAttribute
     public int getId() {
         return id;
     }
@@ -39,6 +45,8 @@ public class PhoneUser {
         this.id = id;
     }
 
+    @XmlElement(name="number")
+    @XmlElementWrapper(name = "phone-numbers")
     public List<PhoneNumber> getPhoneNumbers() {
         return phoneNumbers;
     }
@@ -52,24 +60,24 @@ public class PhoneUser {
     }
 
     public PhoneNumber getNumber(String caption){
-        PhoneNumber phoneNumber=null;
-        for(PhoneNumber number:phoneNumbers){
-            if(number.getCaption()==caption){
-                phoneNumber=number;
-            }
-        }
+        PhoneNumber phoneNumber = getPhoneNumber(caption);
         return phoneNumber;
     }
 
     public void deleteNumber(String caption){
+        PhoneNumber phoneNumber = getPhoneNumber(caption);
+        if(phoneNumber!=null){
+            phoneNumbers.remove(phoneNumber);
+        }
+    }
+
+    private PhoneNumber getPhoneNumber(String caption) {
         PhoneNumber phoneNumber=null;
         for(PhoneNumber number: phoneNumbers){
             if(number.getCaption()==caption){
                 phoneNumber=number;
             }
         }
-        if(phoneNumber!=null){
-            phoneNumbers.remove(phoneNumber);
-        }
+        return phoneNumber;
     }
 }
