@@ -23,8 +23,6 @@
     <name>phonebook.services.rest</name>
     <url>http://maven.apache.org</url>
 
-
-
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -37,6 +35,7 @@
             <groupId>${project.groupId}</groupId>
             <version>${project.version}</version>
         </dependency>
+        <!-- JAX-RS -->
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-server</artifactId>
