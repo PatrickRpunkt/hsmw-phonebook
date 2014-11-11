@@ -71,6 +71,14 @@ public class PhoneUser {
         }
     }
 
+    public boolean containsNumber(String caption){
+        boolean result = false;
+        if(this.getPhoneNumber(caption)!=null){
+            result = true;
+        }
+        return result;
+    }
+
     private PhoneNumber getPhoneNumber(String caption) {
         PhoneNumber phoneNumber=null;
         for(PhoneNumber number: phoneNumbers){

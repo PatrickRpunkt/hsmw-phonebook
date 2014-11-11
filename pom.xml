@@ -16,7 +16,6 @@
     <!-- Eindeutige Defintion des Artefakts ueber group- artifactId und version 
     Mit diesen Angaben kann dieses Artefakt in jedem anderen maven-Projekt als 
     Abhaengikeit (dependeny verwendet werden) -->
-    <groupId>edu.htwm.a3s</groupId>
     <artifactId>phonebook</artifactId>
     <version>1.0-SNAPSHOT</version>
 

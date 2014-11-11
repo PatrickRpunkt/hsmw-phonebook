@@ -17,9 +17,7 @@
 
 
 
-    <groupId>edu.htwm.a3s</groupId>
     <artifactId>phonebook.services.rest</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <name>phonebook.services.rest</name>
     <url>http://maven.apache.org</url>
 
@@ -27,7 +25,6 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
